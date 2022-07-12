@@ -25,5 +25,10 @@ namespace Kinoteatr
             this.kinoteatrFilmsTableAdapter.Fill(this.kinoteatrDBDataSet.KinoteatrFilms);
 
         }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

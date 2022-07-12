@@ -46,6 +46,7 @@ namespace Kinoteatr
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sessionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fKdboFilmsdboKinoteatrFilmsKinoteatrFilmIdBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kinoteatrDataSet)).BeginInit();
@@ -55,6 +56,7 @@ namespace Kinoteatr
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKdboFilmsdboKinoteatrFilmsKinoteatrFilmIdBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -79,12 +81,13 @@ namespace Kinoteatr
             this.Price,
             this.viewDataGridViewTextBoxColumn,
             this.sessionDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.filmsBindingSource2;
+            this.dataGridView2.DataSource = this.fKdboFilmsdboKinoteatrFilmsKinoteatrFilmIdBindingSource;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Left;
             this.dataGridView2.Location = new System.Drawing.Point(374, 0);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(357, 450);
             this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // kinoteatrDataSet
             // 
@@ -160,6 +163,11 @@ namespace Kinoteatr
             this.sessionDataGridViewTextBoxColumn.HeaderText = "Session";
             this.sessionDataGridViewTextBoxColumn.Name = "sessionDataGridViewTextBoxColumn";
             // 
+            // fKdboFilmsdboKinoteatrFilmsKinoteatrFilmIdBindingSource
+            // 
+            this.fKdboFilmsdboKinoteatrFilmsKinoteatrFilmIdBindingSource.DataMember = "FK_dbo.Films_dbo.KinoteatrFilms_KinoteatrFilm_Id";
+            this.fKdboFilmsdboKinoteatrFilmsKinoteatrFilmIdBindingSource.DataSource = this.kinoteatrFilmsBindingSource;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +187,7 @@ namespace Kinoteatr
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKdboFilmsdboKinoteatrFilmsKinoteatrFilmIdBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -201,6 +210,7 @@ namespace Kinoteatr
         private System.Windows.Forms.DataGridViewTextBoxColumn viewDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sessionDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource filmsBindingSource2;
+        private System.Windows.Forms.BindingSource fKdboFilmsdboKinoteatrFilmsKinoteatrFilmIdBindingSource;
     }
 }
 
